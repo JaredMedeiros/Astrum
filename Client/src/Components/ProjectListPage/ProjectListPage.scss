@@ -1,0 +1,107 @@
+@use '../../partials/colors' as *;
+@use '../../partials/mixins' as *;
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Charm&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.pl-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: .7;
+    
+    @include desktop {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+        image-rendering: crisp-edges;
+    }
+
+    &__project-container {
+        border: 2px solid $main-text-color;
+        border-radius: 20px;
+        padding: 2rem 2rem .5rem 2rem;
+        width: 70%;
+        margin: 6rem 0 2rem 0;
+
+        @include tablet {
+            width: 60%;
+            margin-bottom: 4rem;
+        }
+
+        @include desktop {
+            width: 50%;
+            margin-right: 2rem;
+            padding: 2rem 3rem 0 3rem;
+        }
+    }
+
+    &__project-line {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem 0;
+
+        @include tablet {
+            justify-content: flex-start;
+        }
+    }
+
+    &__project-title {
+        color: $main-text-color;
+        padding-right: 1rem;
+        font-family: 'Roboto';
+        font-weight: 200;
+        font-size: 2.5rem;
+
+        @include tablet {
+            width: 60%;
+            text-align: left;
+        }
+
+        @include desktop {
+            width: 80%;
+        }
+    }
+
+    &__arrow {
+        width: 40%;
+        height: 1.5rem;
+
+        @include desktop {
+            width: 20%;
+            height: 1.2rem;
+        }
+    }
+
+    &__tagline {
+        color: $main-text-color;
+        font-family: 'Roboto';
+        font-size: 1.75rem;
+        font-weight: 200;
+        opacity: .9;
+
+        @include tablet {
+            font-size: 2.25rem;
+        }
+
+        @include desktop {
+            font-size: 1.75rem;
+        }
+    }
+
+    &__add-project {
+        margin-bottom: 4rem;
+
+        @include desktop {
+            width: 2.3rem;
+        }
+    }
+    
+    &__gradient-circle {
+        margin-top: 8rem;
+
+        @include tablet {
+            display: none;
+        }
+    }
+}
