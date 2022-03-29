@@ -1,0 +1,24 @@
+@use '../../partials/colors' as *;
+@use '../../partials/mixins' as *;
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Charm&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.footer {
+display: none;
+
+    @include tablet {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }    
+
+    &__workblock-link {
+        font-family: 'Roboto';
+        color: #00810D;
+        opacity: .85;
+        letter-spacing: 1.2px;
+        padding-bottom: 2rem;
+        padding-right: 4rem;
+    }
+}
