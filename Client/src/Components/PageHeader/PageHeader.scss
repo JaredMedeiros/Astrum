@@ -13,6 +13,8 @@
     background-color: $main-background-color;
     color: $main-text-color;
     width: 100%;
+    position: fixed;
+    top: 0;
     
     @include tablet {
         padding: 0 1rem 0 1rem;
