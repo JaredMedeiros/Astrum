@@ -2,7 +2,7 @@ import './AddProject.scss'
 import addThis from '../../assets/update.png'
 import goBack from '../../assets/goBackArrow.png'
 
-export default function() {
+export default function AddTask() {
     return (
         <div className = 'add-project-page'>
             <h1 className = 'add-project-page__page-title'>Add Project.</h1>
