@@ -1,0 +1,174 @@
+@use '../../partials/colors' as *;
+@use '../../partials/mixins' as *;
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Charm&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.project-dashboard {
+    width: 100%; 
+
+    &__title {
+        font-family: 'Roboto';
+        font-size: 4rem;
+        color: $main-text-color;
+        letter-spacing: 2px;
+
+        @include tablet {
+            text-align: left;
+            margin: 2rem 0 0 2rem;
+        }
+
+        @include desktop {
+            font-size: 6rem;
+            margin-left: 3rem;
+        }
+    }
+
+    &__entry-point-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        @include tablet {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-around;
+            margin: 0 1rem;
+        }
+
+        @include desktop {
+            margin: 2rem 5rem 0 5rem;
+        }
+    }
+
+    &__entry-point {
+        height: 12rem;
+        width: 12rem;
+        border: 3px solid $main-text-color;
+        border-radius: 20px;
+        margin-top: 2.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 1rem;
+
+        @include tablet {
+            margin-top: 8rem;
+        }
+
+        @include desktop {
+            height: 15rem;
+            width: 15rem;
+            border: 6px solid $main-text-color;
+        }
+
+    }
+
+    &__entry-point-top {
+        width: 100%;
+        height: 7.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    &__entry-point-bottom {
+        width: 40%;
+        height: 7.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end;
+        text-align: left;
+    }
+
+    &__entry-point-title {
+        font-family: 'Roboto';
+        font-size: 1.5rem;
+        color: $main-text-color;
+        letter-spacing: 0.125rem;
+        margin-left: 0.3125rem;
+        margin-bottom: 0.3125rem;
+
+        @include desktop {
+            font-size: 2rem;
+            margin-left: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+.square {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: red;
+    margin-right: 0.3125rem;
+    margin-top: 0.3125rem;
+
+}
+
+.triangle {
+    width: 0;
+	height: 0;
+	border-left: 1.25rem solid transparent;
+	border-right: 1.25rem solid transparent;
+	border-bottom: 2.5rem solid yellow; 
+    margin-right: 0.3125rem;
+    margin-top: 0.3125rem;
+}
+
+.circle {
+    height: 2.7rem;
+    width: 2.7rem;
+    background-color: blue;
+    border-radius: 50%;
+    margin-right: 0.3125rem;
+    margin-top: 0.3125rem;
+}
+
+.add-team-button-mobile {
+    width: 10rem;
+    height: 6rem;
+    border: 2.5px solid $main-text-color;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+        display: none;
+    }
+
+    &__text {
+        color: $main-text-color;
+        font-family: 'Roboto';
+        font-size: 1.75rem;
+        margin: 1rem;
+    }
+}
+
+.add-team-button {
+    display: none;
+
+    @include tablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15rem;
+        height: 4rem;
+        border: 2.5px solid $main-text-color;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 3rem;
+
+        &__text {
+            color: $main-text-color;
+            font-family: 'Roboto';
+            font-size: 2rem;
+            margin: 1rem;
+            font-weight: 200;
+        }
+    }
+}
