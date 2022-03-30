@@ -1,0 +1,129 @@
+@use '../../partials/colors' as *;
+@use '../../partials/mixins' as *;
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Charm&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.login-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/loginpage.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+
+    @include tablet {
+        justify-content: flex-start;
+    }
+
+    &__title {
+        color: $main-text-color;
+        font-family: 'Roboto';
+        font-size: 6rem;
+
+        @include tablet {
+            font-size: 10rem;
+            padding-top: 6rem;
+        }
+
+
+        @include desktop {
+            font-size: 13rem;
+            padding-top: 2rem;
+            letter-spacing: 5px;
+        }
+    }
+
+    &__form {
+        width: 80%;
+        height: 20rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid $main-text-color;
+        border-radius: 5px;
+        margin-top: 2rem;
+
+        @include tablet {
+            width: 50%;
+            height: 22rem;
+        }
+
+        @include desktop {
+            width: 40%;
+        }
+    }
+
+    &__username {
+        width: 80%;
+        height: 4rem;
+        background-color: transparent;
+        border: 2px solid $main-text-color;
+        box-shadow: none;
+        color: $main-text-color;
+        font-family: 'Roboto';
+        font-size: 2rem;
+        padding-left: .5rem;
+        margin-bottom: 1.5rem;
+
+        @include tablet {
+            height: 5rem;
+            font-size: 2.5rem;
+        }
+    }
+
+    &__password {
+        width: 80%;
+        height: 4rem;
+        background-color: transparent;
+        border: 2px solid $main-text-color;
+        box-shadow: none;
+        color: $main-text-color;
+        font-family: 'Roboto';
+        font-size: 2rem;
+        padding-left: .5rem;
+
+        @include tablet {
+            height: 5rem;
+            font-size: 2.5rem;
+        }
+    }
+
+    &__button {
+        width: 40%;
+        height: 4rem;
+        background-color: transparent;
+        border: 2px solid $main-text-color;
+        box-shadow: none;
+        color: $main-text-color;
+        font-family: 'Roboto';
+        font-size: 2rem;
+        padding-left: .5rem;
+        margin-top: 1.5rem;
+    }
+
+    &__to-signup {
+        color: $main-text-color;
+
+        @include tablet {
+            font-size: 1.7rem;
+        }
+    }
+}
+
+::placeholder {
+    color: $main-text-color;
+    
+  }

@@ -9,20 +9,22 @@ import AddTeam from './Components/AddTeam/AddTeam';
 import AddCheckpoint from './Components/AddCheckpoint/AddCheckpoint';
 import ProjectDashboard from './Components/ProjectDashboard/ProjectDashboard';
 import SprintRoadmap from './Components/SprintRoadmap/SprintRoadmap'
+import LogInPage from './Components/LogInPage/LogInPage'
 
 function App() {
   return (
     <div className="App">
+      <LogInPage/>
       {/* <LandingPage/> */}
-      <PageHeader/>
-      <SprintRoadmap/>
+      {/* <PageHeader/> */}
+      {/* <SprintRoadmap/> */}
       {/* <ProjectDashboard/> */}
       {/* <AddCheckpoint/> */}
       {/* <AddTeam/> */}
       {/* <AddProject/> */}
       {/* <AddTask/> */}
       {/* <ProjectListPage/> */}
-      <PageFooter/>
+      {/* <PageFooter/> */}
     </div>
   );
 }
