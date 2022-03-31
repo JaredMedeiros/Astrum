@@ -17,7 +17,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('../../assets/loginpage.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../../assets/loginpage.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -55,6 +55,10 @@ body {
         border: 3px solid $main-text-color;
         border-radius: 5px;
         margin-top: 2rem;
+        box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
 
         @include tablet {
             width: 50%;

@@ -10,11 +10,13 @@ import AddCheckpoint from './Components/AddCheckpoint/AddCheckpoint';
 import ProjectDashboard from './Components/ProjectDashboard/ProjectDashboard';
 import SprintRoadmap from './Components/SprintRoadmap/SprintRoadmap'
 import LogInPage from './Components/LogInPage/LogInPage'
+import SignUpPage from './Components/SignUpPage/SignUpPage';
 
 function App() {
   return (
     <div className="App">
-      <LogInPage/>
+      {/* <LogInPage/> */}
+      <SignUpPage/>
       {/* <LandingPage/> */}
       {/* <PageHeader/> */}
       {/* <SprintRoadmap/> */}
