@@ -11,14 +11,16 @@ import ProjectDashboard from './Components/ProjectDashboard/ProjectDashboard';
 import SprintRoadmap from './Components/SprintRoadmap/SprintRoadmap'
 import LogInPage from './Components/LogInPage/LogInPage'
 import SignUpPage from './Components/SignUpPage/SignUpPage';
+import TaskBoard from './Components/TaskBoard/TaskBoard';
 
 function App() {
   return (
     <div className="App">
+      <TaskBoard/>
       {/* <LogInPage/> */}
-      <SignUpPage/>
+      {/* <SignUpPage/> */}
       {/* <LandingPage/> */}
-      {/* <PageHeader/> */}
+      <PageHeader/>
       {/* <SprintRoadmap/> */}
       {/* <ProjectDashboard/> */}
       {/* <AddCheckpoint/> */}
@@ -26,7 +28,7 @@ function App() {
       {/* <AddProject/> */}
       {/* <AddTask/> */}
       {/* <ProjectListPage/> */}
-      {/* <PageFooter/> */}
+      <PageFooter/>
     </div>
   );
 }
