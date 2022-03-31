@@ -18,6 +18,7 @@ export default function SignUpPage() {
                 </div>
                 <button className = 'signup-page__button'>take me there.</button>
             </form>
+            <p className = 'signup-page'>Have an account? Log in!</p>
         </main>
     )
 }
