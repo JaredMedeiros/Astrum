@@ -7,34 +7,31 @@ import AddProject from './Components/AddProject/AddProject';
 import AddTask from './Components/AddTask/AddTask';
 import AddTeam from './Components/AddTeam/AddTeam';
 import AddCheckpoint from './Components/AddCheckpoint/AddCheckpoint';
-import ProjectDashboard from './Components/ProjectDashboard/ProjectDashboard';
+import ProjectDashboard from './pages/ProjectDashboard/ProjectDashboard';
 import SprintRoadmap from './Components/SprintRoadmap/SprintRoadmap'
-import LogInPage from './Components/LogInPage/LogInPage'
-import SignUpPage from './Components/SignUpPage/SignUpPage';
+import LogInPage from './pages/LogInPage/LogInPage'
+import SignUpPage from './pages/SignUpPage/SignUpPage';
 import TaskBoard from './Components/TaskBoard/TaskBoard';
 import TaskDetailPage from './Components/TaskDetailPage/TaskDetailPage';
 import WorkblockPage from './Components/WorkblockPage/WorkblockPage';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
 import {useState} from 'react'
 
 function App() {
-const [user, setLoginUser] = useState({
-
-})
 
   return (
     <div className="App">
       <Router>
-        <Routes>
-          <Route exact path = '/'>
-            {
-              user && user._id ? <ProjectDashboard/> : <LogInPage/>
-            }<ProjectDashboard/> 
-          </Route>
-          <Route path = '/LoginPage'><LogInPage setLoginUser = {setLoginUser}/></Route>
-          <Route path = '/SignupPage'><SignUpPage/></Route>
-        </Routes>
+        <div className='container'>
+          <Routes>
+            <Route path='/' element={<ProjectDashboard />} />
+            <Route path='/login' element={<LogInPage />} />
+            <Route path='/signup' element={<SignUpPage />} />
+          </Routes>
+        </div>
       </Router>
+      <ToastContainer />
       {/* <PageHeader/> */}
       {/* <WorkblockPage/> */}
       {/* <TaskDetailPage/> */}

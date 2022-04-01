@@ -1,6 +1,35 @@
 import './ProjectDashboard.scss'
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+
 
 export default function ProjectDashboard() {
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+  
+    const { user } = useSelector((state) => state.auth)
+    const { isError, message } = useSelector(
+      (state) => state.goals
+    )
+  
+    useEffect(() => {
+      if (isError) {
+        console.log(message)
+      }
+  
+      if (!user) {
+        navigate('/login')
+      }
+  
+    //   dispatch(getGoals())
+  
+    //   return () => {
+    //     dispatch(reset())
+    //   }
+    }, [user, navigate, isError, message, dispatch])
+
+
     return (
         // this name will be populated dynamically
         <div className = 'project-dashboard'>
