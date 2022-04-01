@@ -14,12 +14,29 @@ import SignUpPage from './Components/SignUpPage/SignUpPage';
 import TaskBoard from './Components/TaskBoard/TaskBoard';
 import TaskDetailPage from './Components/TaskDetailPage/TaskDetailPage';
 import WorkblockPage from './Components/WorkblockPage/WorkblockPage';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {useState} from 'react'
 
 function App() {
+const [user, setLoginUser] = useState({
+
+})
+
   return (
     <div className="App">
-      <PageHeader/>
-      <WorkblockPage/>
+      <Router>
+        <Routes>
+          <Route exact path = '/'>
+            {
+              user && user._id ? <ProjectDashboard/> : <LogInPage/>
+            }<ProjectDashboard/> 
+          </Route>
+          <Route path = '/LoginPage'><LogInPage setLoginUser = {setLoginUser}/></Route>
+          <Route path = '/SignupPage'><SignUpPage/></Route>
+        </Routes>
+      </Router>
+      {/* <PageHeader/> */}
+      {/* <WorkblockPage/> */}
       {/* <TaskDetailPage/> */}
       {/* <TaskBoard/> */}
       {/* <LogInPage/> */}
