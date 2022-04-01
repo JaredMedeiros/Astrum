@@ -13,12 +13,14 @@ import LogInPage from './Components/LogInPage/LogInPage'
 import SignUpPage from './Components/SignUpPage/SignUpPage';
 import TaskBoard from './Components/TaskBoard/TaskBoard';
 import TaskDetailPage from './Components/TaskDetailPage/TaskDetailPage';
+import WorkblockPage from './Components/WorkblockPage/WorkblockPage';
 
 function App() {
   return (
     <div className="App">
       <PageHeader/>
-      <TaskDetailPage/>
+      <WorkblockPage/>
+      {/* <TaskDetailPage/> */}
       {/* <TaskBoard/> */}
       {/* <LogInPage/> */}
       {/* <SignUpPage/> */}

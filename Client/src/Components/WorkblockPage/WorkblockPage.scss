@@ -1,0 +1,47 @@
+@use '../../partials/colors' as *;
+@use '../../partials/mixins' as *;
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Charm&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+body {
+    background-color: $main-background-color;
+    color: $main-text-color;
+    height: 100vh;
+    font-family: 'Roboto';
+}
+
+.workblock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    &__title {
+        font-size: 2.5rem;
+        color: $main-accent-color;
+        letter-spacing: 2px;
+        position: absolute;
+        top: 12%;
+        left: 5%;
+
+        @include desktop {
+            font-size: 3.2rem;
+            top: 14%;
+            left: 3%;
+        }
+    }
+
+    &__go-back {
+        position: absolute;
+        top: 13%;
+        right: 5%;
+
+        @include desktop {
+            top: 15%;
+            right: 3%;
+        }
+    }
+}

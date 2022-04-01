@@ -1,0 +1,26 @@
+@use '../../partials/colors' as *;
+@use '../../partials/mixins' as *;
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Charm&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+.pomodoro {
+    width: 100%;
+    font-size: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10rem;
+
+    &__message {
+        font-size: 1.5rem;
+        min-height: 2rem;
+        margin-bottom: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    &__timer {
+        font-size: 6rem;
+    }
+}
