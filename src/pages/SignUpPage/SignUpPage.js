@@ -1,60 +1,43 @@
 import { useState, useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
-import { toast } from 'react-toastify'
-import { register, reset } from '../../features/auth/authSlice'
+import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import './SignUpPage.scss'
 
 
 function SignUpPage() {
-  const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    password: '',
-    confirmpswd: '',
-  })
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmpswd, setConfirmpswd] = useState("");
 
-  const { username, email, password, confirmpswd } = formData
+  // let passwordChar = password.length >= 6;
+  // let passwordLowerChar = /(.*[a-z].*)/.test(password);
+  // let passwordUpperChar = /(.*[A-Z].*)/.test(password);
+  // let passwordNum = /(.*[0-9].*)/.test(password);
+  // let passwordSpecialChar = /(.*[^a-zA-Z0-9].*)/.test(password);
 
-  const navigate = useNavigate()
-  const dispatch = useDispatch()
+  let emailCheck = /\S+@\S+\.\S+/.test(email);
 
-  const { user, isError, isSuccess, message } = useSelector(
-    (state) => state.auth
-  )
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    if (isError) {
-      toast.error(message)
-    }
+  async function registerUser(event) {
+    event.preventDefault();
 
-    if (isSuccess || user) {
-      navigate('/')
-    }
-
-    dispatch(reset())
-  }, [user, isError, isSuccess, message, navigate, dispatch])
-
-  const onChange = (e) => {
-    setFormData((prevState) => ({
-      ...prevState,
-      [e.target.name]: e.target.value,
-    }))
-  }
-
-  const onSubmit = (e) => {
-    e.preventDefault()
-
-    if (password !== confirmpswd) {
-      toast.error('Passwords do not match')
-    } else {
-      const userData = {
+    try {
+  
+    const response = await axios.post("http://localhost:5500/user/signup", {
+      
         username,
         email,
         password,
-      }
-
-      dispatch(register(userData))
+        confirmpswd,
+    });
+    console.log(response.data);
+    navigate("/login");
+    } catch (e){
+      console.log(e.stack)
     }
+
   }
 
 
@@ -64,18 +47,18 @@ function SignUpPage() {
             <p className = 'signup-page__tagline'>
                 Astrum. a <i>simple,</i> intuitive, collaborative project management interface for developers.
             </p>
-            <form className = 'signup-page__form' onSubmit={onSubmit}>
+            <form className = 'signup-page__form' onSubmit={registerUser}>
                 <div className = 'signup-page__form-left'>
-                    <input type = 'text' name = 'username' id = 'username' value={username} onChange={onChange} className = 'signup-page__username' placeholder = 'username' />
-                    <input type = 'text' name = 'email' id = 'email' value={email} onChange={onChange} className = 'signup-page__email' placeholder = 'email' />
+                    <input type = 'text' name = 'username' id = 'username' value={username} onChange={(e) => setUsername(e.target.value)} className = 'signup-page__username' placeholder = 'username' />
+                    <input type = 'text' name = 'email' id = 'email' value={email} onChange={(e) => setEmail(e.target.value)} className = 'signup-page__email' placeholder = 'email' />
                 </div>
                 <div className = 'signup-page__form-right'>
-                    <input type = 'text' name = 'password' id = 'password' value={password} onChange={onChange} className = 'signup-page__password' placeholder = 'password' />
-                    <input type = 'text' name = 'confirmpswd' id = 'confirmpswd' value={confirmpswd} onChange={onChange} className = 'signup-page__confirmpswd' placeholder = 'confirm pswd' />
+                    <input type = 'password' name = 'password' id = 'password' value={password} onChange={(e) => setPassword(e.target.value)} className = 'signup-page__password' placeholder = 'password' />
+                    <input type = 'password' name = 'confirmpswd' id = 'confirmpswd' value={confirmpswd} onChange={(e) => setConfirmpswd(e.target.value)} className = 'signup-page__confirmpswd' placeholder = 'confirm pswd' />
                 </div>
-                <button className = 'signup-page__button'>take me there.</button>
+                <button className = 'signup-page__button' type='submit'>take me there.</button>
             </form>
-            <p className = 'signup-page'>Have an account? Log in!</p>
+            <Link className = 'link' to='/login'><p className = 'signup-page__to-login'>Have an account? Log in!</p></Link>
         </main>
     )
 }

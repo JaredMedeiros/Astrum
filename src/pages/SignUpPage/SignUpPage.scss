@@ -200,4 +200,13 @@ body {
             width: 40%;
         }
     }
+
+    &__to-login {
+        font-size: 1.5rem;
+    }
+}
+
+.link {
+    color: $main-text-color;
+    text-decoration: none;
 }
