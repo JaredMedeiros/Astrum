@@ -14,7 +14,7 @@ function LogInPage() {
 
   async function loginUser(event) {
     event.preventDefault();
-    const response = await fetch("http://localhost:5500/user/login", {
+    const response = await fetch("http://localhost:5500/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
