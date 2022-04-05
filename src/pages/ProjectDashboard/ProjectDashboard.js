@@ -13,8 +13,8 @@ class ProjectDashboard extends Component {
         const finalID = newID.slice(10);
         axios.get("http://localhost:5500/projects" + finalID).then((response) => {
             this.setState({thisProject: response.data})
-            console.log(response.data)
-            console.log(response.data.projectName)
+            // console.log(response.data)
+            // console.log(response.data.projectName)
         });
     }
     
