@@ -17,8 +17,7 @@ class ProjectListPage extends Component {
     componentDidMount() {
         axios.get("http://localhost:5500/projects")
              .then ((res) => {
-                 let arrayResponse = [res.data]
-                 this.setState({arrayResponse})
+                 this.setState({projects: res.data})
              })
     }         
     
@@ -27,11 +26,11 @@ class ProjectListPage extends Component {
         return (
             <div className = 'pl-page'>
                 <main className = 'pl-page__project-container'>
-                    {this.state.projects.map((projects)=> (
-                        <div key={projects.id} className = 'pl-page__project-list'>
+                    {this.state.projects.map((project, index)=> (
+                        <div key={index} className = 'pl-page__project-list'>
                             <div className = 'pl-page__project-line'>
-                                <h1 className = 'pl-page__project-title'>{projects.projectName}</h1>
-                                <img src = {projectArrow} className = 'pl-page__arrow' alt = 'arrow to project' />
+                                <h1 className = 'pl-page__project-title'>{project.projectName}</h1>
+                                <Link className = 'pl-page__arrow' to={`/dashboard/${project.projectName}`}><img  src = {projectArrow} alt = 'arrow to project' /></Link>
                             </div>    
                         </div>
                     ))}   

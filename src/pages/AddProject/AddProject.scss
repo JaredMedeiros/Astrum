@@ -58,6 +58,7 @@ html {
         color: $main-text-color;
         border: 1px solid $main-text-color;
         border-radius: 20px;
+        text-decoration: none;
 
         @include desktop {
             width: 35%;

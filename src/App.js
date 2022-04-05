@@ -14,8 +14,9 @@ import SignUpPage from './pages/SignUpPage/SignUpPage';
 import TaskBoard from './Components/TaskBoard/TaskBoard';
 import TaskDetailPage from './Components/TaskDetailPage/TaskDetailPage';
 import WorkblockPage from './Components/WorkblockPage/WorkblockPage';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import {useState} from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {useState} from 'react';
+import ProtectedRoute from './Components/ProtectedRoute';
 
 function App() {
 
@@ -24,10 +25,12 @@ function App() {
       <Router>
         <div className='container'>
           <Routes>
-            <Route path='/' element={<ProjectListPage />} />
+            <Route path = '/projects' element={<ProjectListPage/>} />
             <Route path='/login' element={<LogInPage />} />
             <Route path='/signup' element={<SignUpPage />} />
             <Route path='/add-project' element={<AddProject />} />
+            <Route path='dashboard/:id' element={<ProjectDashboard/>} />
+            <Route path='/add-team' element={<AddTeam />} />
           </Routes>
         </div>
       </Router>

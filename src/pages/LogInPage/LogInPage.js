@@ -29,7 +29,7 @@ function LogInPage() {
     if (data.token) {
       localStorage.setItem("user", data.username);
       alert("Login Successful");
-      navigate("/");
+      navigate("/projects");
     } else {
       alert("Please check your username and password");
     }

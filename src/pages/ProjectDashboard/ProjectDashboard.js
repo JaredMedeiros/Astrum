@@ -1,8 +1,10 @@
 import './ProjectDashboard.scss'
+import {Component} from 'react'
 
 
-export default function ProjectDashboard() {
+class ProjectDashboard extends Component {
 
+    render(){
     return (
         // this name will be populated dynamically
         <div className = 'project-dashboard'>
@@ -48,3 +50,6 @@ export default function ProjectDashboard() {
         </div>
     )
 }
+}
+
+export default ProjectDashboard
