@@ -30,7 +30,7 @@ class ProjectListPage extends Component {
                         <div key={index} className = 'pl-page__project-list'>
                             <div className = 'pl-page__project-line'>
                                 <h1 className = 'pl-page__project-title'>{project.projectName}</h1>
-                                <Link className = 'pl-page__arrow' to={`/dashboard/${project.projectName}`}><img  src = {projectArrow} alt = 'arrow to project' /></Link>
+                                <Link className = 'pl-page__arrow' to={`/dashboard/${project._id}`}><img  src = {projectArrow} alt = 'arrow to project' /></Link>
                             </div>    
                         </div>
                     ))}   
