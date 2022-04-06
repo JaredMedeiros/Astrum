@@ -57,11 +57,6 @@ function AddProject() {
                     <input type = 'text' name = 'projectName' id = 'project-name' value={projectName} onChange={(e) => setProjectName(e.target.value)}placeholder = 'Project name...' />
                     {/* <textarea type = 'text' id = 'project-description' placeholder = 'Project description...'/> */}
                     <div className = 'add-project-page__form-bottom'>
-                        <Link to="/add-team" className = 'add-project-page__add-team'>
-                        <div>
-                            <h3 className = 'add-project-page__add-team-text'>Add team</h3>
-                        </div>
-                        </Link>
                         <button className = 'add-project-page__button'>
                             <img src = {addThis} className = 'add-project-page__button-img' alt = 'add project' />
                         </button>

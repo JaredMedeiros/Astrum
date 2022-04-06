@@ -8,13 +8,18 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    width: 70%;
 
     &__title {
         font-family: 'Roboto';
-        font-size: 2.5rem;
+        font-size: 2rem;
         color: $main-text-color;
         font-weight: 200;
         margin-top: 10rem;
+
+        @include desktop {
+            font-size: 3rem;
+        }
     }
 
     &__content-wrapper {
@@ -56,7 +61,7 @@
         }
 
         @include desktop {
-            width: 60%;
+            width: 90%;
         }
     }
 

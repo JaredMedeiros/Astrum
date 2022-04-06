@@ -53,35 +53,15 @@ html {
         
     }
 
-    &__add-team {
-        width: 50%;
-        color: $main-text-color;
-        border: 1px solid $main-text-color;
-        border-radius: 20px;
-        text-decoration: none;
-
-        @include desktop {
-            width: 35%;
-        }
-        
-    }
-
-    &__add-team-text {
-        font-family: 'Roboto';
-        font-size: 1.8rem;
-        font-weight: 300;
-        text-align: center;
-    }
-
     &__button {
         border: none;
         background-color: $main-background-color;
         box-shadow: none;
-        width: 50%;
+        width: 100%;
         // padding-left: 3rem;
 
         @include desktop {
-            width: 65%;
+            width: 100%;
         }
     }
 
