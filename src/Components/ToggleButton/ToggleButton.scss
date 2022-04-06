@@ -1,0 +1,35 @@
+@use '../../partials/colors' as *;
+@use '../../partials/mixins' as *;
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Charm&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.container {
+    display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+  }
+  .buttonTrue {
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    background-color: $main-background-color;
+    border: none;
+    border-radius: 50%;
+    box-shadow: none;
+    height: 3rem;
+    width: 3rem;
+  }
+  
+  .buttonFalse {
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    background-color: $main-accent-color;
+    border: none;
+    border-radius: 50%;
+    box-shadow: none;
+    height: 3rem;
+    width: 3rem;
+  }
+  

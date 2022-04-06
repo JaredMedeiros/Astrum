@@ -10,13 +10,14 @@
         bottom: 0;
         right: 0; 
        
-
     &__workblock-link {
         font-family: 'Roboto';
+        font-size: 1.5rem;
         color: #00810D;
         opacity: .85;
         letter-spacing: 1.2px;
-        padding-bottom: 1rem;
+        padding-bottom: .5rem;
         padding-right: 3rem;
+        text-decoration: none;
     }
 }

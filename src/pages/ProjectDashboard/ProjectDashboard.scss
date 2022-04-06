@@ -5,21 +5,25 @@
 
 .project-dashboard {
     width: 100%; 
+    padding-top: 7rem;
 
     &__title {
         font-family: 'Roboto';
-        font-size: 4rem;
+        font-size: 3.5rem;
         color: $main-text-color;
         letter-spacing: 2px;
+        text-align: center;
 
         @include tablet {
             text-align: left;
             margin: 2rem 0 0 2rem;
+            font-size: 4rem;
         }
 
         @include desktop {
             font-size: 6rem;
             margin-left: 3rem;
+            margin-top: 0;
         }
     }
 
@@ -37,7 +41,7 @@
         }
 
         @include desktop {
-            margin: 2rem 5rem 0 5rem;
+            margin: 0 5rem 0 5rem;
         }
     }
 
@@ -97,6 +101,17 @@
             margin-left: 0.5rem;
             margin-bottom: 0.5rem;
         }
+    }
+
+    &__go-back {
+        position: absolute;
+        bottom: 3rem;
+        left: 1.5rem;
+
+        @include tablet {
+            bottom: 2.5rem;
+            left: 3rem;
+        }    
     }
 }
 

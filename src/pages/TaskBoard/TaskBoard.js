@@ -6,6 +6,8 @@ import goBack from '../../assets/goBackArrow.png'
 import { EditText } from 'react-edit-text'
 import 'react-edit-text/dist/index.css'
 import axios from 'axios';
+import PageHeader from '../../Components/PageHeader/PageHeader';
+import PageFooter from '../../Components/PageFooter/PageFooter';
 
 class TaskBoard extends Component{
 
@@ -26,6 +28,8 @@ class TaskBoard extends Component{
 
 render() {
     return (
+        <>
+        <PageHeader/>
         <div className = 'taskboard'>
             <h1 className = 'taskboard__title'>
                 <strong>Task Board —</strong> {this.state.project.projectName}
@@ -34,10 +38,12 @@ render() {
                 <div className = 'taskboard__task-list-border'>
                     <main className = 'taskboard__task-list'>
                         {this.state.tasks.map((task, index) => (
-                            <Link to= {`/task-details/${this.state.project._id}`} state={{tasks: task}} key={index} className = 'taskboard__task-line'>
-                                <p className = 'taskboard__task-name'><strong>{task.taskName}</strong></p>
+                            <div  className = 'taskboard__task-line'  key={index}>
+                                <Link  className = 'taskboard__task-name' to= {`/task-details/${this.state.project._id}`} state={{tasks: task}}>
+                                    <p><strong>{task.taskName}</strong></p>
+                                </Link>
                                 <EditText className = 'taskboard__task-status' placeholder = 'status'/>
-                            </Link>
+                            </div>
                         ))}
                     </main>
                 </div>
@@ -45,6 +51,8 @@ render() {
             </div>
             <Link to={`/dashboard/${this.state.project._id}`}><img src = {goBack} className = 'taskboard__go-back' alt = 'go back to project dashboard' /></Link>
         </div>
+        <PageFooter/>
+        </>
     )
 }
 }

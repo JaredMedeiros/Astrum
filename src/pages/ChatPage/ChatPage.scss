@@ -1,0 +1,76 @@
+@use '../../partials/colors' as *;
+@use '../../partials/mixins' as *;
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Charm&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.chatpage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+    align-items: center;
+
+    &__top {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        border-bottom: 1px solid $main-text-color;
+    }
+
+    &__title {
+        font-family: 'Roboto';
+        font-size: 4rem;
+        color: $main-text-color;
+        width: 80%;
+        padding: 2rem 2rem 2rem 1rem;
+
+        @include desktop {
+            font-size: 5.5rem;
+        }
+    }
+
+    &__go-back {
+        position: absolute;
+       top: 9rem;
+       right: 2rem;
+
+       @include desktop {
+           top: 10rem;
+           right: 4rem;
+       }
+    }
+
+    &__chat-box {
+        width: 78%;
+        height: 24rem;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        direction: rtl;
+        margin: 1rem;
+    }
+
+    &__bottom {
+        width: 90%;
+        border-top: 1px solid $main-text-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__text-bar {
+        width: 80%;
+        border: 3px solid $main-text-color;
+        border-radius: 30px;
+        margin-top: 2rem;
+    }
+
+    &__text-bar-send {
+        font-size: 2rem;
+        margin: 0;
+        padding: .5rem 1rem;
+        text-align: right;
+    }
+}

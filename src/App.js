@@ -13,9 +13,9 @@ import LogInPage from './pages/LogInPage/LogInPage'
 import SignUpPage from './pages/SignUpPage/SignUpPage';
 import TaskBoard from './pages/TaskBoard/TaskBoard';
 import TaskDetailPage from './pages/TaskDetailPage/TaskDetailPage';
-import WorkblockPage from './Components/WorkblockPage/WorkblockPage';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import {useState} from 'react';
+import WorkblockPage from './pages/WorkblockPage/WorkblockPage';
+import ChatPage from './pages/ChatPage/ChatPage';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import ProtectedRoute from './Components/ProtectedRoute';
 
 function App() {
@@ -36,6 +36,8 @@ function App() {
             <Route path='task-details/:id' element={<TaskDetailPage/>} />
             <Route path='sprint-roadmap/:id' element={<SprintRoadmap/>} />
             <Route path='add-checkpoint/:id' element={<AddCheckpoint/>} />
+            <Route path='/workblock' element={<WorkblockPage/>} />
+            <Route path='/chat' element={<ChatPage/>} />
             {/* <Route path='/add-team' element={<AddTeam />} /> */}
           </Routes>
         </div>

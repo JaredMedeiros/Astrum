@@ -4,6 +4,9 @@ import goBack from '../../assets/goBackArrow.png'
 import {React, Component} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios'
+import PageHeader from '../../Components/PageHeader/PageHeader';
+import PageFooter from '../../Components/PageFooter/PageFooter';
+import ToggleButton from '../../Components/ToggleButton/ToggleButton'
 
 class SprintRoadmap extends Component {
 
@@ -22,6 +25,8 @@ class SprintRoadmap extends Component {
 
     render() {
     return (
+        <>
+        <PageHeader/>
         <div className = 'sprint-roadmap'>
             <h1 className = 'sprint-roadmap__page-title'>{`${this.state.project.projectName} RoadMap`}</h1>
             <div className = 'sprint-roadmap__wrap'>
@@ -29,6 +34,7 @@ class SprintRoadmap extends Component {
                 {this.state.checkpoints.map((checkpoint, index) => (
                     <div className = 'sprint-roadmap__goal' key={index}>
                         <h2 className = 'sprint-roadmap__goal-title'>{checkpoint.checkpointTitle}</h2>
+                        <ToggleButton/>
                         <p className = 'sprint-roadmap__goal-date'>{checkpoint.dueDate}</p>
                     </div>
                 ))}
@@ -37,6 +43,8 @@ class SprintRoadmap extends Component {
             </div>
             <Link to={`/dashboard/${this.state.project._id}`}><img src = {goBack} className = 'sprint-roadmap__go-back' alt = 'go back to project dashboard' /></Link>
         </div>
+        <PageFooter/>
+        </>
     )
     }
 }

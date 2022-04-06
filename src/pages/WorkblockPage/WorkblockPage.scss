@@ -24,23 +24,23 @@ body {
         color: $main-accent-color;
         letter-spacing: 2px;
         position: absolute;
-        top: 12%;
+        top: 5%;
         left: 5%;
 
         @include desktop {
             font-size: 3.2rem;
-            top: 14%;
+            top: 6%;
             left: 3%;
         }
     }
 
     &__go-back {
         position: absolute;
-        top: 13%;
+        top: 6%;
         right: 5%;
 
         @include desktop {
-            top: 15%;
+            top: 7%;
             right: 3%;
         }
     }

@@ -5,30 +5,10 @@ import axios from 'axios'
 import {useLocation, useNavigate} from 'react-router-dom'
 
 function TaskDetailPage() {
-
-    // state = {
-    //     tasks: [],
-    // }
-
-    // componentDidMount() {
-    //     const newID = window.location.pathname;
-    //     const projectID = newID.slice(13, 25);
-    //     const taskID = newID.slice(25)
-    //     axios.get("http://localhost:5500/projects/" + projectID +"/" + taskID).then((response) => {
-    //         this.setState({tasks: response.data})
-    //         console.log(response.data.tasks)
-    //         // console.log(response.data.projectName)
-    //     });
-    // }   
-
+  
     const location = useLocation()
-    // const { from } = location.state
-    // console.log(location.state.tasks.taskDescription)
-
     const navigate = useNavigate();
 
-
-    // render() {
     return (
         <main className = 'task-detail'>
             <div className = 'task-detail__content-wrap'>

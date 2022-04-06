@@ -6,6 +6,8 @@ import { Component } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import AddProject from '../AddProject/AddProject';
+import PageHeader from '../../Components/PageHeader/PageHeader';
+import PageFooter from '../../Components/PageFooter/PageFooter';
 
 
 class ProjectListPage extends Component {
@@ -24,6 +26,8 @@ class ProjectListPage extends Component {
     render()
         { 
         return (
+            <>
+            {/* <PageHeader/> */}
             <div className = 'pl-page'>
                 <main className = 'pl-page__project-container'>
                     {this.state.projects.map((project, index)=> (
@@ -37,9 +41,9 @@ class ProjectListPage extends Component {
                     <p className = 'pl-page__tagline'>collaborate.<i> simply</i></p>
                 </main>
                 <Link to="/add-project"><img src = {more} className = 'pl-page__add-project' alt = 'add more' /></Link>
-                <img src = {gradientCircle} className = 'pl-page__gradient-circle' alt = '' />
-
             </div>
+            {/* <PageFooter/> */}
+            </>
         )
     }
 }
