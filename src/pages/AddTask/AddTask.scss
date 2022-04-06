@@ -53,23 +53,23 @@ html {
         
     }
 
-    &__add-team {
-        width: 50%;
-        color: $main-text-color;
-        border: 1px solid $main-text-color;
-        border-radius: 20px;
+    // &__add-team {
+    //     width: 50%;
+    //     color: $main-text-color;
+    //     border: 1px solid $main-text-color;
+    //     border-radius: 20px;
 
-        @include desktop {
-            width: 35%;
-        }
+    //     @include desktop {
+    //         width: 35%;
+    //     }
         
-    }
+    // }
 
-    &__add-team-text {
-        font-family: 'Roboto';
-        font-size: 1.8rem;
-        font-weight: 300;
-    }
+    // &__add-team-text {
+    //     font-family: 'Roboto';
+    //     font-size: 1.8rem;
+    //     font-weight: 300;
+    // }
 
     &__button {
         border: none;
@@ -126,5 +126,22 @@ html {
     @include tablet {
         width: 60%;
         height: 16rem;
+    }
+}
+
+#task-asignee {
+    width: 50%;
+    color: $main-text-color;
+    background-color: $main-background-color;
+    border: 1px solid $main-text-color;
+    border-radius: 20px;
+    font-family: 'Roboto';
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-align: center;
+    height: 4.5rem;
+
+    @include desktop {
+        width: 35%;
     }
 }

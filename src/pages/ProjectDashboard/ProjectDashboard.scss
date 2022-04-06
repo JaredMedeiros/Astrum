@@ -52,6 +52,7 @@
         align-items: flex-start;
         justify-content: flex-start;
         padding: 1rem;
+        text-decoration: none;
 
         @include tablet {
             margin-top: 8rem;
@@ -171,4 +172,8 @@
             font-weight: 200;
         }
     }
+}
+
+.Link {
+    text-decoration: none;
 }

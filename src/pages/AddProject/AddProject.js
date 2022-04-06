@@ -18,8 +18,9 @@ function AddProject() {
     try {
   
     const response = await axios.post("http://localhost:5500/projects", {
-      
+        
         projectName
+
     });
     console.log(response.data);
     navigate("/projects");
