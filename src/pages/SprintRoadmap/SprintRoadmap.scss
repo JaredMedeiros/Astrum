@@ -9,7 +9,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 5rem;
+    padding-top: 3.3rem;
+
+    @include tablet {
+        padding-top: 6rem;
+    }
+
+    @include desktop {
+        padding-top: 5rem;
+    }
    
     &__page-title {
         color: $main-text-color;
@@ -21,8 +29,8 @@
 
         @include desktop {
             width: 100%;
-            font-size: 5rem;
-            text-align: left;
+            font-size: 3rem;
+            text-align: center;
             padding-left: 4rem;
         }
     }
@@ -43,9 +51,9 @@
     }
 
     &__container {
-        margin-top: 3rem;
+        margin-top: 2rem;
         width: 90%;
-        height: 34rem;
+        height: 22rem;
         overflow-y: scroll;
         display: flex;
         flex-direction: row-reverse;
@@ -81,7 +89,7 @@
         color: $main-text-color;
         font-size: 1rem;
         text-transform: none;
-        height: 35%;
+        height: 28%;
         margin: 0;
         padding-top: .5rem;
         text-align: center;
@@ -98,8 +106,8 @@
         height: 25%;
         text-align: right;
         padding-right: .5rem;
-        padding-bottom: 0;
-        margin: 1rem 0 0 0;
+        padding-bottom: 1rem;
+        margin: .85rem .25rem 0 0;
 
         @include desktop {
             font-size: 1.25rem;

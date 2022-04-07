@@ -38,6 +38,12 @@ export default function AddTask() {
 
     return (
         <div className = 'add-task-page'>
+            <div className = 'color-bar'>
+                <span className = 'color-1'></span>
+                <span className = 'color-2'></span>
+                <span className = 'color-3'></span>
+                <span className = 'color-4'></span>
+            </div>
             <h1 className = 'add-task-page__page-title'>Add task.</h1>
             <form className = 'add-task-page__form' onSubmit={addTask}>
                 <input type = 'text' id = 'task-name' value={taskName} onChange={(e) => setTaskName(e.target.value)} placeholder = 'task name...' />

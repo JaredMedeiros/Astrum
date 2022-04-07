@@ -34,6 +34,12 @@ export default function AddCheckpoint() {
 
     return (
         <div className = 'add-checkpoint-page'>
+            <div className = 'color-bar'>
+                <span className = 'color-1'></span>
+                <span className = 'color-2'></span>
+                <span className = 'color-3'></span>
+                <span className = 'color-4'></span>
+            </div>
             <h1 className = 'add-checkpoint-page__page-title'>Add Roadmap Checkpoint.</h1>
             <form className = 'add-checkpoint-page__form' onSubmit={addCheckpoint}>
                 <input type = 'text' id = 'checkpoint-title' value={checkpointTitle} onChange={(e) => setCheckpointTitle(e.target.value)} placeholder = 'Checkpoint title...' />

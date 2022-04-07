@@ -1,5 +1,5 @@
 import './App.scss';
-import LandingPage from './Components/LandingPage/LandingPage'
+import LandingPage from './pages/LandingPage/LandingPage'
 import PageHeader from './Components/PageHeader/PageHeader'
 import ProjectListPage from './pages/ProjectListPage/ProjectListPage'
 import PageFooter from './Components/PageFooter/PageFooter'
@@ -25,7 +25,7 @@ function App() {
       <Router>
         <div className='container'>
           <Routes>
-            {/* <Route path = '/' element={<LandingPage/>} /> */}
+            <Route path = '/' element={<LandingPage/>} />
             <Route path = '/projects' element={<ProjectListPage/>} />
             <Route path='/login' element={<LogInPage />} />
             <Route path='/signup' element={<SignUpPage />} />
