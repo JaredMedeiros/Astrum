@@ -4,7 +4,7 @@
 <ul>
   <li>This project was my final capstone project for my BrainStation WebDev bootcamp</li>
   <li>We had a time restraint of 1.5 weeks to build from start to finish</li>
-  <li>The purpose of this application is to provide developers with a simple, intuitive, collaborative projet management application/li>
+  <li>The purpose of this application is to provide developers with a simple, intuitive, collaborative projet management application</li>
 </ul>
 
 <h2>Tech Stack</h2>
